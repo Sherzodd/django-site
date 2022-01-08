@@ -7,12 +7,12 @@ from django.db.models.fields import CharField
 
 
 class Promotion(models.Model):
-    description = models.CharField(max_length=255)
+    description = models.CharField(max_length=250)
     discount = models.FloatField()
 
 
 class Collection(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=250)
     featured_product = models.ForeignKey(
         'Product', on_delete=models.SET_NULL, null=True, related_name='+'
     )
